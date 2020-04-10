@@ -1,7 +1,17 @@
-DESIGN : I tried to make desing more responsive - it scales very well from 320px to 768px, and from there main video and nav bar scale properly. I couldn't scale other elements without breaking down visual design, specifically these elements can't break dimensions of the same elements at 1440px breakpoint.
+# BRAINFLIX
 
-FUNCTIONALITY : All requested functionality added! Upload video page allows you to upload a video. The video is sent to the backend and stored in JSON file. 
+<img width="1280" alt="perfect_cup" src="https://i.ibb.co/16Qz7tX/Screen-Shot-2020-04-10-at-3-45-30-PM.png">
 
-DIVING DEEPER : Video LIKES implemented and counter is working correctly! Started working on media controls, but didn't have time to finish. Instead I incorporated DELETE and ADD comments functionality.
+BRAINFLIX is social media / video hosting web application (similar to YouTube and Vimeo). Built in 1 week as a part of my diploma program assignment.
 
-I've found two bugs - if you will force reload a page with a specific video ID, it will load a random video instead, however if you add a comment, it will display correct video and an array of comments. Second bug was that clicking on logo won't load a random video which resulted in error. I've decided to remove a random video on initial load functionality and went with just a first video from array instead. Everything works as it should - I did a lot of testing and couldn't find any bugs.
+## APP VIEWPORT
+
+App is fully responsive from 320px all the way to 1440px.
+
+## GENERAL FUNCTIONALITY :
+
+Expect the same functionality as a typical social media / video hosting web application will provide : watch videos, like videos, comment and delete comments(administrator feature), upload videos, etc. App is fully functional and scalable.
+
+## TECH STACK :
+
+React, Node, Express.
