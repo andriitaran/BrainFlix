@@ -1,0 +1,143 @@
+.header {
+  @include section;
+  margin: 0 16px;
+  height: 169px;
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__container {
+    width: 288px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    &--logo {
+      width: 288px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--search {
+      position: relative;
+      &-img {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+      &-input {
+        width: 288px;
+        background: $alabaster;
+        @include text(13px, 18px);
+        color: $black;
+        height: 48px;
+        border: 1px solid $silver;
+        border-radius: 4px;
+        padding-left: 48px;
+        margin-bottom: 16px;
+        &:focus {
+          outline: none;
+          border: 1px solid $black;
+          color: $black;
+        }
+      }
+    }
+    &--upload {
+      position: relative;
+      width: 223px;
+      text-decoration: none;
+      @include subheader(14px, 22px);
+      height: 48px;
+      color: $white;
+      background-color: $brainflix-blue;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      padding-top: 4px;
+      border: 0;
+      // transition: all 0.5s ease;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--upload img {
+      position: absolute;
+      left: 48px;
+      top: 16px;
+    }
+    &--avatar {
+      flex-shrink: 0;
+      height: 48px;
+      width: 48px;
+      background-image: url(../assets/Images/Mohan-muruge.jpg);
+      background-size: cover;
+      border-radius: 50%;
+      margin-left: 16px;
+    }
+  }
+}
+
+@include medium {
+  .header {
+    min-width: 720px;
+    margin: 0;
+    padding: 16px 24px;
+    height: 80px;
+    &-wrapper {
+      flex-wrap: nowrap;
+      margin-left: auto;
+    }
+    &__container {
+      width: 100%;
+      max-width: 1080px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      &--logo {
+        justify-content: flex-start;
+        width: 120px;
+        margin-right: auto;
+      }
+      &--search-input {
+        width: 200px;
+        margin-right: 24px;
+      }
+      &--upload {
+        padding-left: 24px;
+        margin-right: 24px;
+        width: 103px;
+      }
+      &--upload img {
+        padding-right: 8px;
+        left: 8px;
+        top: 15px;
+      }
+      &--avatar {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include large {
+  .header {
+    padding: 16px 180px;
+    &__container {
+      width: 1080px;
+      &--logo {
+        justify-content: flex-start;
+        margin-right: 509px;
+      }
+      &--search-input {
+        width: 252px;
+      }
+    }
+  }
+}

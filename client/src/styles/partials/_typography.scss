@@ -1,0 +1,39 @@
+// FONTS
+
+@font-face {
+  font-family: Avenir Regular;
+  src: url(../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+  font-family: Avenir Demi Bold;
+  src: url(../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Demi.otf);
+}
+
+@font-face {
+  font-family: Avenir Bold;
+  src: url(../assets/fonts/AvenirNextProLT/AvenirNextLTPro-Bold.otf);
+}
+
+//MIXINS FOR HEADERS, SUBHEADERS, PARAGRAPHS & TEXT
+
+@mixin header($font-size, $line-height) {
+  font-family: Avenir Bold;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $black;
+}
+
+@mixin subheader($font-size, $line-height) {
+  font-family: Avenir Demi Bold;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $black;
+}
+
+@mixin text($font-size, $line-height) {
+  font-family: Avenir Regular;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $black;
+}

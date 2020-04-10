@@ -1,0 +1,239 @@
+// NEW COMMENTS
+
+.new-comment {
+  @include section;
+  margin-bottom: 0;
+
+  &-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+
+    &__commentcount {
+      @include subheader(14px, 22px);
+      margin-bottom: 32px;
+    }
+
+    &__join {
+      @include subheader(14px, 22px);
+      color: $silver;
+      margin: 0 auto 0 64px;
+    }
+
+    &__newcomment {
+      // width: 100%;
+      display: flex;
+      min-width: 288px;
+      border-bottom: 1px solid $silver;
+      justify-content: flex-start;
+
+      &--avatar {
+        flex-shrink: 0;
+        height: 48px;
+        width: 48px;
+        background-image: url(../assets/Images/Mohan-muruge.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        margin-right: 16px;
+      }
+
+      &--box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 224px;
+        max-width: 520px;
+
+        &--comment {
+          // max-width: 440px;
+          resize: none;
+          background: $alabaster;
+          height: 96px;
+          @include text(13px, 18px);
+          color: $black;
+          border: 2px solid $silver;
+          border-radius: 4px;
+          padding-left: 16px;
+          padding-top: 16px;
+          margin-bottom: 16px;
+          &:focus {
+            outline: none;
+            border: 2px solid $brainflix-blue;
+          }
+        }
+
+        &--button {
+          text-decoration: none;
+          @include subheader(14px, 22px);
+          height: 48px;
+          width: 224px;
+          color: $white;
+          background-color: $brainflix-blue;
+          border-radius: 4px;
+          margin-bottom: 24px;
+          transition: all 0.5s ease;
+          border: 0;
+          align-self: flex-end;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: $brainflix-blue-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .new-comment {
+    margin: 0 24px;
+    &-container {
+      min-width: 720px;
+      margin: 0 auto;
+      &__join {
+        align-self: flex-start;
+        margin-left: 64px;
+      }
+      &__newcomment {
+        width: 720px;
+        justify-content: flex-start;
+        &--box {
+          min-width: 656px;
+          flex-direction: row;
+          &--comment {
+            width: 440px;
+            height: 48px;
+            padding-left: 12px;
+            padding-top: 12px;
+            margin-right: 16px;
+          }
+          &--button {
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .new-comment {
+    margin-left: 180px;
+    min-width: 712px;
+    max-width: 712px;
+    &-container {
+      min-width: 712px;
+      max-width: 712px;
+      &__commentcount {
+        max-width: 712px;
+      }
+      &__newcomment {
+        max-width: 712px;
+      }
+    }
+  }
+}
+
+// OLD COMMENTS
+
+.old-comments {
+  @include section;
+  margin: 0 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  &-container {
+    margin: 0 auto;
+    max-width: 520px;
+  }
+}
+
+.comment-card {
+  margin-top: 16px;
+  min-width: 288px;
+  max-width: 520px;
+  color: $black;
+  display: flex;
+  border-bottom: 1px solid $silver;
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $silver;
+    margin-right: 16px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
+
+    &--delete {
+      height: 20px;
+      align-self: flex-end;
+    }
+
+    &--top {
+      min-width: 232px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      &--username {
+        @include subheader(14px, 22px);
+      }
+      &--date {
+        @include text(13px, 18px);
+        color: $silver;
+      }
+    }
+
+    &--text {
+      @include text(13px, 18px);
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@include medium {
+  .old-comments {
+    &-container {
+      margin: 0px auto 40px auto;
+      min-width: 720px;
+    }
+  }
+  .comment-card {
+    min-width: 720px;
+    &__body {
+      &--top {
+        justify-content: flex-start;
+        &--username {
+          margin-right: 16px;
+        }
+      }
+      &--text {
+        width: 624px;
+      }
+    }
+  }
+}
+
+@include large {
+  .old-comments {
+    margin-left: 180px;
+    min-width: 712px;
+    max-width: 712px;
+  }
+  .comment-card {
+    min-width: 712px;
+    max-width: 712px;
+  }
+}

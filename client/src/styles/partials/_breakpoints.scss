@@ -1,0 +1,13 @@
+//MEDIA QUERY @ TABLET
+@mixin medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+//MEDIA QUERY @ DESKTOP
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}

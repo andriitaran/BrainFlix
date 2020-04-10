@@ -1,0 +1,30 @@
+//GLOBAL STYLING
+
+@import "../styles/partials/reset";
+@import "../styles/partials/breakpoints";
+@import "../styles/partials/colors";
+@import "../styles/partials/typography";
+
+//MIXIN for a section element that is used throught sections of the webpage
+
+@mixin section {
+  margin: 16px;
+  display: flex;
+}
+
+@import "../styles/partials/header";
+@import "../styles/partials/video-player";
+@import "../styles/partials/video-info";
+@import "../styles/partials/comments";
+@import "../styles/partials/videos-list";
+@import "../styles/partials/upload";
+
+@include large {
+  .wrapper-1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  // .wrapper-2 {
+  //   // width: 900px;
+  // }
+}

@@ -1,0 +1,129 @@
+// VIDEO INFO
+
+.video-info {
+  @include section;
+  margin: 32px 16px 40px 16px;
+
+  &-container {
+    min-width: 288px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    &__top {
+      width: 288px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 24px;
+
+      &--title {
+        @include header(24px, 32px);
+        margin-bottom: 16px;
+      }
+      &--author {
+        @include subheader(14px, 22px);
+        margin-bottom: 32px;
+        margin-right: 8px;
+      }
+      &--date {
+        @include text(13px, 18px);
+        color: $silver;
+        margin-top: 2px;
+        width: 120px;
+      }
+      &--views {
+        @include text(13px, 18px);
+        width: 120px;
+        position: relative;
+        padding-left: 32px;
+      }
+      &--views img {
+        margin-right: 8px;
+        padding-top: 4px;
+        position: absolute;
+        top: -2px;
+        left: 0px;
+      }
+      &--likes {
+        @include text(13px, 18px);
+        width: 120px;
+        position: relative;
+        padding-left: 24px;
+      }
+      &--likes img {
+        margin-right: 8px;
+        padding-top: 4px;
+        position: absolute;
+        top: -1px;
+        left: 0px;
+      }
+    }
+    &__description {
+      @include text(13px, 18px);
+      padding-top: 24px;
+      border-top: 1px solid $silver;
+    }
+  }
+}
+
+@include medium {
+  .video-info {
+    margin: 48px 24px 64px 24px;
+    &-container {
+      min-width: 720px;
+      margin: 0 auto;
+      &__top {
+        width: 720px;
+        border-bottom: 1px solid $silver;
+        &--title {
+          @include header(36px, 44px);
+          width: 720px;
+          margin-bottom: 24px;
+        }
+        &--author {
+          @include subheader(16px, 24px);
+          margin-bottom: 0;
+        }
+        &--date {
+          @include text(14px, 22px);
+          color: $silver;
+          margin-top: 2px;
+        }
+        &--views,
+        &--likes {
+          @include text(14px, 22px);
+          margin-top: 2px;
+        }
+        &--views {
+          margin-left: auto;
+        }
+        &--likes {
+          width: 80px;
+        }
+      }
+      &__description {
+        @include text(14px, 22px);
+        width: 520px;
+        border: none;
+      }
+    }
+  }
+}
+
+@include large {
+  .video-info {
+    &-container__top{
+      min-width: 712px;
+      max-width: 712px;
+    }
+    margin-left: 180px;
+    min-width: 712px;
+    max-width: 712px;
+    &-container {
+      min-width: 712px;
+      max-width: 712px;
+    }
+  }
+}
