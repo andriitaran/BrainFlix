@@ -1,8 +1,8 @@
 # BRAINFLIX
 
-<img width="1280" alt="perfect_cup" src="https://i.ibb.co/16Qz7tX/Screen-Shot-2020-04-10-at-3-45-30-PM.png">
-
 BRAINFLIX is social media / video hosting web application (similar to YouTube and Vimeo). Built in 1 week as a part of my diploma program assignment.
+
+<img width="1280" alt="perfect_cup" src="https://i.ibb.co/16Qz7tX/Screen-Shot-2020-04-10-at-3-45-30-PM.png">
 
 ## APP VIEWPORT
 
@@ -14,4 +14,4 @@ Expect the same functionality as a typical social media / video hosting web appl
 
 ## TECH STACK :
 
-React, Node, Express.
+HTML, CSS, Javascript, React, Node, Express
